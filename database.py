@@ -15,12 +15,12 @@ def read():
         'X-Master-Key': MASTERKEY,
         'X-Access-Key': ACCESSKEY
     }
-    return json.loads(requests.get(url, headers=headers).content)["users"]
+    return json.loads(requests.get(url, headers=headers).content)['record']
 
 def write(data):
     url = f'https://api.jsonbin.io/v3/b/{BIN}'
     headers = {
         'Content-Type': 'application/json',
-        'X-Master-Key': MASTERKEY
+        'X-Master-Key': MASTERKEY,
     }
-    requests.put(url,headers=headers, data=json.dumps(data))
+    requests.put(url,headers=headers, json=data)
