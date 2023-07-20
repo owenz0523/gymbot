@@ -184,15 +184,15 @@ async def recent(ctx, username=None):
         for j in range(len(recent)):
             i = recent[j]
             if i == 0:
-                embed.add_field(name=f'Day {j+1}', value="Push", inline = False)
+                embed.add_field(name=f'Day {j+1}', value="Push 🏋️‍♂️", inline = False)
             elif i == 1:
-                embed.add_field(name=f'Day {j+1}', value="Pull", inline = False)
+                embed.add_field(name=f'Day {j+1}', value="Pull 💪", inline = False)
             elif i == 2:
-                embed.add_field(name=f'Day {j+1}', value="Leg", inline = False)
+                embed.add_field(name=f'Day {j+1}', value="Leg 🔥", inline = False)
             elif i == 3:
-                embed.add_field(name=f'Day {j+1}', value="Rest", inline = False)
+                embed.add_field(name=f'Day {j+1}', value="Rest ✨", inline = False)
             else:
-                embed.add_field(name=f'Day {j+1}', value="Skip", inline = False)
+                embed.add_field(name=f'Day {j+1}', value="Skip 💀", inline = False)
 
     await ctx.reply(embed=embed)
 
